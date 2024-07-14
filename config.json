@@ -1,17 +1,17 @@
 {
   "server": {
     "id": 1,
-    "host": "xxx.xxx.xxx.xxx",
-    "queryPort": 27165,
-    "rconPort": 21114,
-    "rconPassword": "password",
-    "logReaderMode": "tail",
-    "logDir": "C:/path/to/squad/log/folder",
+    "host": "",
+    "queryPort": 32710,
+    "rconPort": 32710,
+    "rconPassword": "",
+    "logReaderMode": "ftp",
+    "logDir": "/SquadGame/Saved/Logs",
     "ftp": {
-      "host": "xxx.xxx.xxx.xxx",
+      "host": "",
       "port": 21,
-      "user": "FTP Username",
-      "password": "FTP Password",
+      "user": "",
+      "password": "",
       "useListForSize": false
     },
     "adminLists": [
@@ -43,7 +43,7 @@
   "plugins": [
     {
       "plugin": "AutoKickUnassigned",
-      "enabled": true,
+      "enabled": false,
       "warningMessage": "Join a squad, you are unassigned and will be kicked",
       "kickMessage": "Unassigned - automatically removed",
       "frequencyOfWarnings": 30,
@@ -56,19 +56,19 @@
     {
       "plugin": "AutoTKWarn",
       "enabled": true,
-      "attackerMessage": "Please apologise for ALL TKs in ALL chat!",
-      "victimMessage": null
+      "attackerMessage": "您TK了其他玩家！请在公屏发送sorry!",
+      "victimMessage": "您被TK了请别生气，如碰到恶意TK请联系OP或加群244287641"
     },
     {
       "plugin": "CBLInfo",
-      "enabled": true,
+      "enabled": false,
       "discordClient": "discord",
       "channelID": "",
       "threshold": 6
     },
     {
       "plugin": "ChatCommands",
-      "enabled": true,
+      "enabled": false,
       "commands": [
         {
           "command": "squadjs",
@@ -100,7 +100,7 @@
     },
     {
       "plugin": "DiscordAdminRequest",
-      "enabled": true,
+      "enabled": false,
       "discordClient": "discord",
       "channelID": "",
       "ignoreChats": [],
@@ -111,11 +111,11 @@
       "pingDelay": 60000,
       "color": 16761867,
       "warnInGameAdmins": false,
-      "showInGameAdmins": true
+      "showInGameAdmins": false
     },
     {
       "plugin": "DiscordChat",
-      "enabled": true,
+      "enabled": false,
       "discordClient": "discord",
       "channelID": "",
       "chatColors": {},
@@ -133,7 +133,7 @@
     },
     {
       "plugin": "DiscordFOBHABExplosionDamage",
-      "enabled": true,
+      "enabled": false,
       "discordClient": "discord",
       "channelID": "",
       "color": 16761867
@@ -148,7 +148,7 @@
     },
     {
       "plugin": "DiscordPlaceholder",
-      "enabled": true,
+      "enabled": false,
       "discordClient": "discord",
       "command": "!placeholder",
       "channelID": ""
@@ -163,27 +163,27 @@
     },
     {
       "plugin": "DiscordRoundWinner",
-      "enabled": true,
+      "enabled": false,
       "discordClient": "discord",
       "channelID": "",
       "color": 16761867
     },
     {
       "plugin": "DiscordRoundEnded",
-      "enabled": true,
+      "enabled": false,
       "discordClient": "discord",
       "channelID": "",
       "color": 16761867
     },
     {
       "plugin": "DiscordServerStatus",
-      "enabled": true,
+      "enabled": false,
       "discordClient": "discord",
       "messageStore": "sqlite",
       "command": "!status",
       "disableSubscriptions": false,
       "updateInterval": 60000,
-      "setBotStatus": true
+      "setBotStatus": false
     },
     {
       "plugin": "DiscordSquadCreated",
@@ -191,7 +191,7 @@
       "discordClient": "discord",
       "channelID": "",
       "color": 16761867,
-      "useEmbed": true
+      "useEmbed": false
     },
     {
       "plugin": "DiscordSubsystemRestarter",
@@ -201,7 +201,7 @@
     },
     {
       "plugin": "DiscordTeamkill",
-      "enabled": true,
+      "enabled": false,
       "discordClient": "discord",
       "channelID": "",
       "color": 16761867,
@@ -221,26 +221,26 @@
     },
     {
       "plugin": "SeedingMode",
-      "enabled": true,
+      "enabled": false,
       "interval": 150000,
       "seedingThreshold": 50,
       "seedingMessage": "Seeding Rules Active! Fight only over the middle flags! No FOB Hunting!",
-      "liveEnabled": true,
+      "liveEnabled": false,
       "liveThreshold": 52,
       "liveMessage": "Live!",
-      "waitOnNewGames": true,
+      "waitOnNewGames": false,
       "waitTimeOnNewGame": 30
     },
     {
       "plugin": "SocketIOAPI",
-      "enabled": false,
+      "enabled": true,
       "websocketPort": "",
       "securityToken": ""
     },
     {
       "plugin": "TeamRandomizer",
       "enabled": true,
-      "command": "randomize"
+      "command": "!tr"
     }
   ],
   "logger": {
